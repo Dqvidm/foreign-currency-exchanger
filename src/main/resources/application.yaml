@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Forex
+  shell:
+    interactive:
+      enabled: true
+    script:
+      git add pom.xml .gitignore src/main/resources/application.propertiesenabled: true
+
+logging:
+  level:
+    com.converter.forex: INFO
