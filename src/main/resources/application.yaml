@@ -5,7 +5,7 @@ spring:
     interactive:
       enabled: true
     script:
-      git add pom.xml .gitignore src/main/resources/application.propertiesenabled: true
+      enabled: true
 
 logging:
   level:
