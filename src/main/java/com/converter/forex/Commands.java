@@ -25,6 +25,7 @@ public class Commands {
         try {
             forexService.syncRatesFromApi(baseCurrency);
             System.out.printf("Successfully synchronized rates for base currency: %s\n", baseCurrency);
+            System.out.println("Test API here: http://localhost:8080/api/forex/convert?amount=100&from=USD&to=EUR\n");
         } catch (Exception e) {
             System.out.println("API Sync failed: " + e.getMessage());
         }

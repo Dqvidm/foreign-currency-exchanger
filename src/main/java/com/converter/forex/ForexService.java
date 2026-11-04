@@ -180,6 +180,12 @@ public class ForexService {
             //parse rates and add to graph
             rates.fields().forEachRemaining(entry -> {
                 String targetCurrency = entry.getKey();
+
+                // Skip mapping the base currency to itself
+                if (base.equals(targetCurrency)) {
+                    return;
+                }
+
                 BigDecimal rate = new BigDecimal(entry.getValue().asText());
 
                 //add rate as bidirectional so u can exchange backwards
